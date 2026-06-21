@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tide — Tasks</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>Tide</h1>
+
+    <!-- Shown when signed OUT -->
+    <section id="auth">
+      <input id="email" type="email" placeholder="you@example.com" />
+      <input id="password" type="password" placeholder="Password (6+ chars)" />
+      <div class="row">
+        <button id="signupBtn">Create account</button>
+        <button id="signinBtn" class="ghost">Sign in</button>
+      </div>
+      <p id="authError" class="error"></p>
+    </section>
+
+    <!-- Shown when signed IN -->
+    <section id="app" hidden>
+      <div class="bar">
+        <span id="who"></span>
+        <button id="signoutBtn" class="ghost">Sign out</button>
+      </div>
+      <form id="addForm" class="row">
+        <input id="taskTitle" placeholder="Add a task…" />
+        <button type="submit">Add</button>
+      </form>
+      <ul id="list"></ul>
+    </section>
+  </main>
+
+  <!-- type="module" lets us use import {} from the CDN -->
+  <script type="module" src="app.js"></script>
+</body>
+</html>
